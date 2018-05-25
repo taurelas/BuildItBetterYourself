@@ -12,7 +12,7 @@ import com.leadinsource.andjoker.JokeDisplay;
 import com.leadinsource.joker.Joker;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ActivityCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,4 +50,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void tellJokeViaApi(View view) {
+
+        new EndpointsAsyncTask().execute(this);
+    }
+
+    public void onResult(String joke) {
+        Intent intent = new Intent(this, JokeDisplay.class);
+        intent.putExtra(JokeDisplay.JOKE_KEY, joke);
+        startActivity(intent);
+    }
 }
