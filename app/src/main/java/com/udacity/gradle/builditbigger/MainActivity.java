@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.leadinsource.andjoker.JokeDisplay;
 import com.leadinsource.joker.Joker;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity implements ActivityCallback {
 
