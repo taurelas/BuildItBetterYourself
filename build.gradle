@@ -20,3 +20,56 @@ allprojects {
         google()
     }
 }
+
+task testTask {
+    group 'Verification'
+    description 'Starts the server, runs tests and stops the server'
+
+    dependsOn 'customStart'
+    dependsOn 'customCheck'
+    dependsOn 'customStop'
+}
+
+task customStart {
+    dependsOn {
+        'backend:appengineStart'
+    }
+
+    doLast {
+        println "Started"
+    }
+}
+
+task customCheck {
+    dependsOn {
+        'app:check'
+    }
+
+    mustRunAfter customStart
+
+    doLast {
+        println "Checked"
+    }
+}
+
+task customStop {
+    dependsOn {
+        'backend:appengineStop'
+    }
+
+    mustRunAfter customCheck
+
+    doLast {
+        println "Stopped"
+    }
+}
+
+
+
+
+
+
+
+
+
+
