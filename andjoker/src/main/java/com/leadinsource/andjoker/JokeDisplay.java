@@ -1,11 +1,9 @@
 package com.leadinsource.andjoker;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class JokeDisplay extends AppCompatActivity {
 

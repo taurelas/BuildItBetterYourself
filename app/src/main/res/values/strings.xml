@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Build it Bigger</string>
+    <string name="app_name">Build it Freee</string>
     <string name="instructions">Press the button for a delicious joke!</string>
     <string name="button_text">Tell Joke via Java Library</string>
     <string name="button_text2">Tell Joke via Cloud API</string>
