@@ -3,7 +3,7 @@
     package="com.leadinsource.andjoker">
 
     <application>
-        <activity android:name=".JokeDisplay"></activity>
+        <activity android:name=".JokeDisplay" />
     </application>
 
 </manifest>
