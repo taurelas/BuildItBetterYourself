@@ -25,6 +25,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -68,3 +72,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
 
 }
+
+
+
+
+
+
