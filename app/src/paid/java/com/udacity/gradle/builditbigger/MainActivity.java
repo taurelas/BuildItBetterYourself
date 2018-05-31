@@ -6,20 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ProgressBar;
 
 import com.leadinsource.andjoker.JokeDisplay;
 import com.leadinsource.joker.Joker;
 
-import java.util.ArrayList;
-
 
 public class MainActivity extends AppCompatActivity implements ActivityCallback {
+
+    private ProgressBar spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        spinner = findViewById(R.id.progressBar);
+
     }
 
 
@@ -53,11 +56,12 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
 
 
     public void tellJokeViaApi(View view) {
-
+        spinner.setVisibility(View.VISIBLE);
         new EndpointsAsyncTask().execute(this);
     }
 
     public void onResult(String joke) {
+        spinner.setVisibility(View.GONE);
         Intent intent = new Intent(this, JokeDisplay.class);
         intent.putExtra(JokeDisplay.JOKE_KEY, joke);
         startActivity(intent);
