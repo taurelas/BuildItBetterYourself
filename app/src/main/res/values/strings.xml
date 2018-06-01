@@ -4,5 +4,5 @@
     <string name="button_text">Tell Joke via Java Library</string>
     <string name="button_text2">Tell Joke via Cloud API</string>
     <string name="action_settings">Settings</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="try_again">Try again later or use paid version :) Only £199</string>
 </resources>

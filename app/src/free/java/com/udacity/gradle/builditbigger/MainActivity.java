@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
         if(interstitialAd.isLoaded()) {
             interstitialAd.show();
         } else {
-            Toast.makeText(this, "Try again later or use paid version :) Only £199", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(com.udacity.gradle.builditbigger.R.string.try_again), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
         if(interstitialAd.isLoaded()) {
             interstitialAd.show();
         }else {
-            Toast.makeText(this, "Try again later or use paid version :) Only £199", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(com.udacity.gradle.builditbigger.R.string.try_again), Toast.LENGTH_SHORT).show();
         }
 
 
